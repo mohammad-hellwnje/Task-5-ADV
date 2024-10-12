@@ -1,0 +1,168 @@
+.add-product-container {
+    display: flex;
+}
+
+.add-product-form {
+    padding: 24px 109px 168px 64px;
+    width: 100%;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon1 {
+    width: 40px;
+    height: 40px;
+    border-radius: 32px;
+    border: 1px solid black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    cursor: pointer;
+    margin-bottom: 4.75rem;
+}
+
+.add-product-form h1 {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 1.2;
+    margin-bottom: 76px;
+}
+
+.Add-form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 7rem;
+}
+
+.Add-form .input1 {
+    display: flex;
+    flex-direction: column;
+    width: 39.47%;
+}
+
+.Add-form .input1 label {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.Add-form .input1 input {
+    width: 100%;
+    padding: 15px 15px 14px 15px;
+    border: 1px solid #E5E5E5;
+}
+
+.Add-form .input1 .name {
+    margin-bottom: 64px;
+}
+
+.Add-form .input2 {
+    width: 56.75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-upload {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    border: 1px dashed #384EB74D;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.preview-image {
+    max-width: 208px;
+    height:100%;
+}
+.upload-icon {
+    width: 120px;
+}
+.file-input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.input-send {
+    display: flex;
+    justify-content: center;
+
+}
+.input-send input {
+    width: 199px;
+    height: 61px;
+    color: white;
+    background-color: #FEAF00;
+    border: none;
+    font-size: 32px;
+    font-weight: 500;
+}
+@media(max-width:1439px)  {
+    .Add-form {
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    .Add-form .input1 .name {
+        margin-bottom: 20px;
+    }
+    .add-product-form h1 {
+        margin-bottom: 20px;
+        text-align: center;
+        font-size:35px ;
+    }
+    .Add-form .input1 input {
+        margin-bottom:20px ;
+
+    }
+    .Add-form .input1 {
+        width: 100%;
+    }
+    .Add-form .input2 {
+        width: 100%;
+        height: 150px;
+    }
+    .add-product-form {
+        padding: 20px 50px 10px 50px;
+    }
+    .icon1 {
+        margin-bottom: 20px;
+    }
+
+}
+@media (max-width:768px) {
+
+    .add-product-form {
+        padding: 20px 30px 10px 30px;
+    }
+    .add-product-form h1 {
+        font-size: 20px;
+    }
+    .Add-form .input1 label {
+        font-size: 15px;
+    }
+    .input-send input {
+        width: 100px;
+        height: 40px;
+        font-size: 20px;
+    }
+}
+
+@media(max-width:576px)  {
+    .add-product-form {
+        padding: 10px 15px 10px 15px;
+    }
+    .preview-image{
+        width: 100%;
+    }
+
+}

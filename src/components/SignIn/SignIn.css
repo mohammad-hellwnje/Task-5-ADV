@@ -1,0 +1,230 @@
+.SignIn {
+    background: linear-gradient(to right, #FEAF00, #F8D442);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-box {
+    width: 33.05%;
+    padding: 42px 30px 41px 30px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.signin-box img {
+    width: 151.32px;
+}
+.signin-box h2 {
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 43px 0 9px 0;
+}
+
+.signin-box .info {
+    font-weight: 400;
+    font-size: 14px;
+    color: #6C6C6C;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.signin-box form {
+    width: 100%;
+}
+
+.name-fields,
+.password-fields {
+    display: flex;
+    align-items: end;
+    gap: 24.05px;
+    margin-bottom: 20px;
+}
+
+.signin-box .email {
+    margin-bottom: 20px;
+}
+
+.name-fields div,
+.password-fields div {
+    flex: 1;
+}
+
+
+.signin-box form input {
+    border: 1px solid #E5E5E5;
+    border-radius: 4px;
+    padding: 15px 15.03px 14px 15.03px;
+    width: 100%;
+    margin-top: 10px; 
+}
+
+.signin-box form label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.signin-box form input::placeholder {
+    color: #CDCDCD;
+}
+
+.signin-box form input[type="submit"] {
+    border: none;
+    background-color: #FEAF00;
+    color: white;
+    padding: 14px 0;
+    margin-bottom: 27px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.signin-box .info2 {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.2;
+}
+
+.signin-box .info2 a {
+    color: #FEAF00;
+}
+.upload-photo {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.upload-photo label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.image-upload-wrapper {
+    width: 100px; 
+    height: 100px;
+    position: relative;
+    border: 2px dashed #E5E5E5;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: rgba(56, 77, 183, 0.116);
+}
+
+.image-upload-wrapper input[type="file"] {
+    width: 100%;
+    height: 100%;
+    opacity: 0; 
+    cursor: pointer;
+}
+
+.image-upload-wrapper img.icon {
+    width: 54%; 
+    height: 50%; 
+    object-fit: contain;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.image-upload-wrapper img.preview {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+@media(max-width:1200px) {
+    .signin-box {
+        width: 50%;
+    }
+}
+@media(max-width:992px) {
+    .signin-box {
+        width: 70%;
+    }
+    .SignIn {
+        padding: 10px 20px; 
+    }
+    .signin-box h2 {
+        margin: 20px 0 9px 0;
+    }
+    .signin-box .info {
+        margin-bottom: 20px;
+    }
+    .signin-box form input[type="submit"] {
+        margin-bottom: 15px;
+        padding: 10px 0;
+    }
+    .signin-box form input {
+        padding: 10px;
+    }
+}
+@media(max-width:768px) {
+    .signin-box {
+        width: 85%;
+    }
+
+}
+@media(max-width:576px) {
+    .signin-box {
+        width: 100%;
+        padding:20px 15px;
+    }
+    .signin-box .email {
+        margin-bottom: 10px;
+    }
+    .password-fields {
+        margin-bottom: 10px;
+    }
+}
+@media( max-height:800px){
+    .signin-box {
+        padding: 10px;
+    }
+    
+}
+@media(max-height:850px) {
+    .signin-box {
+        padding: 15px;
+    }
+    .signin-box h2 {
+        margin: 20px 0 9px 0;
+    }
+    .signin-box .info{
+        margin-bottom: 20px;
+    }
+    .signin-box img {
+        width: 120px;
+    }
+    .image-upload-wrapper {
+        width: 80px;
+        height: 80px;
+    }
+    .upload-photo {
+        margin-bottom: 10px;
+    }
+    .signin-box form input[type="submit"] {
+        margin-bottom: 14px;
+    }
+    .name-fields, .password-fields{
+        margin-bottom: 10px;
+    }
+    .signin-box .email {
+        margin-bottom: 10px;
+    }
+}
+
+
+
+ 
+

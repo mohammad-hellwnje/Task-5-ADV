@@ -7,6 +7,7 @@ import { signinData, signupData } from './Data/SigninData';
 import Dashboard from './components/Dashboard/dashboard';
 import AddProduct from './components/AddProduct/AddProduct';
 import ProductShow from './components/ProductShow/ProductShow';
+import { UserProvider } from './components/UserContext/UserContext'; 
 
 const router = createBrowserRouter([
   {
@@ -56,13 +57,13 @@ const router = createBrowserRouter([
     path: "/product-details/:id",
     element: <ProductShow />, 
   }
-  
 ]);
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <UserProvider>
+      <RouterProvider router={router} />
+    </UserProvider>
   </React.StrictMode>
 );
-
 

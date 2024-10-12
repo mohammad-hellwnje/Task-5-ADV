@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import { useUser } from './../UserContext/UserContext'; 
 import "./SignIn.css";
 
 interface SignInProps {
@@ -38,8 +39,9 @@ function SignIn({
   const [profileImage, setProfileImageState] = useState<File | null>(null);
   const [imagePreview, setImagePreview] = useState<string | null>(null);
   const navigate = useNavigate();
+  const { setUser } = useUser(); 
 
-  const send = (e: any) => {
+  const send = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     if (isSignUp) {
@@ -48,7 +50,7 @@ function SignIn({
         return;
       }
 
-      const userName = `${firstName}_${lastName}`.toLowerCase();
+      const userName = `${firstName} ${lastName}`.toLowerCase();
       const formData = new FormData();
       formData.append('first_name', firstName);
       formData.append('last_name', lastName);
@@ -67,12 +69,13 @@ function SignIn({
         },
       })
         .then(res => {
-
-          localStorage.setItem('username', `${firstName} ${lastName}`);
-          if (imagePreview) {
-            localStorage.setItem('profileImage', imagePreview);
-          }
+          const fullName = `${firstName} ${lastName}`;
+          localStorage.setItem('username', fullName);
+          localStorage.setItem('profileImage', imagePreview || 'default-user-image-url');
           localStorage.setItem('token', `Bearer ${res.data.token}`);
+
+          setUser({ username: fullName, profileImage: imagePreview || 'default-user-image-url' });
+
           navigate('/');
         })
         .catch(error => {
@@ -85,7 +88,12 @@ function SignIn({
         password: password,
       })
         .then(res => {
+          const userData = res.data.user; 
+          const fullName = `${userData.first_name} ${userData.last_name}`;
+          localStorage.setItem('username', fullName);
+          localStorage.setItem('profileImage', userData.profile_image_url || 'default-user-image-url');
           localStorage.setItem('token', `Bearer ${res.data.token}`);
+          setUser({ username: fullName, profileImage: userData.profile_image_url || 'default-user-image-url' });
           navigate('/dashboard');
         })
         .catch(error => {

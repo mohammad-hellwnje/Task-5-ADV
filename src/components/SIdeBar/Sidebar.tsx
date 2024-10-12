@@ -12,8 +12,8 @@ function Sidebar() {
   const [activeTab, setActiveTab] = useState('tab1');
   const navigate = useNavigate();
 
-  const username = localStorage.getItem('username');
-  const profileImage = localStorage.getItem('profileImage') || 'default-user-image-url';
+  const username = localStorage.getItem('username') || 'User'; 
+  const profileImage = localStorage.getItem('profileImage') || 'default-user-image-url'; 
 
   const handleLogout = async () => {
     try {
@@ -26,8 +26,12 @@ function Sidebar() {
         },
       });
 
-      localStorage.clear();
-      navigate('/signup');
+
+      localStorage.removeItem('token');
+      localStorage.removeItem('username');
+      localStorage.removeItem('profileImage');
+
+      navigate('/'); 
     } catch (error) {
       console.error('Logout failed:', error);
       alert('Logout failed. Please try again.');
@@ -51,21 +55,21 @@ function Sidebar() {
           className={activeTab === 'tab1' ? 'active' : ''}
           onClick={() => setActiveTab('tab1')}
         >
-          <img src={img2} alt="Products" />Products
+          <img src={img2} alt="Products" /> Products
         </a>
         <a
           href="#tab2"
           className={activeTab === 'tab2' ? 'active' : ''}
           onClick={() => setActiveTab('tab2')}
         >
-          <img src={img3} alt="Favorites" />Favorites
+          <img src={img3} alt="Favorites" /> Favorites
         </a>
         <a
           href="#tab3"
           className={activeTab === 'tab3' ? 'active' : ''}
           onClick={() => setActiveTab('tab3')}
         >
-          <img src={img3} alt="Order List" />Order List
+          <img src={img3} alt="Order List" /> Order List
         </a>
       </nav>
       <button className="logout-button" onClick={handleLogout}>
@@ -76,3 +80,5 @@ function Sidebar() {
 }
 
 export default Sidebar;
+
+

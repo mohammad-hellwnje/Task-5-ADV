@@ -1,87 +1,82 @@
+.sidebar {
+  width: 270px;
+  height: 100vh;
+  background-color: #F2EAE1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 35px 38px 33px 38px;
+}
+.logo {
+  margin-bottom: 20px;
+}
+.user-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.user-image {
+  width: 128px;
+  height: 128px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.user-name {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 5.6rem;
+}
+.tabs {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.tabs a {
+  text-decoration: none;
+  padding: 12px 56px 12px 40px;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 19px;
+  color: black;
+}
+.tabs .active {
+  background-color: #FEAF00;
+}
+.logout-button {
+  margin-top: auto;
+  background-color: #F2EAE1;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+}
+.logout-button img {
+  margin-left: 23px;
+}
+@media(max-width:576px) {
   .sidebar {
-      width: 270px;
-      height: 100vh;
-      background-color: #F2EAE1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 35px 38px 33px 38px;
-    }
-    .logo {
-      margin-bottom: 20px;
-    }
-    .user-profile {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    .user-image {
-      width: 128px;
-      height: 128px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-    
-    .user-name {
-      font-size: 17px;
-      font-weight: 700;
-      margin-bottom: 5.6rem;
-    }
-    
-    .tabs {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
-    
-    .tabs a {
-      text-decoration: none;
-      padding: 12px 56px 12px 40px;
-      text-align: center;
-      cursor: pointer;
-      font-weight: 500;
-      font-size: 14px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 19px;
-      color: black;
-    }
-    
-    .tabs .active {
-      background-color: #FEAF00;
-    }
-    
-    .logout-button {
-      margin-top: auto;
-      background-color: #F2EAE1;
-      border: none;
-      cursor: pointer;
-      font-weight: 500;
-      font-size: 14px;
-      display: flex;
-    }
-    .logout-button img {
-      margin-left: 23px;
-    }
-    @media(max-width:576px) {
-      .sidebar {
-        padding: 10px 15px 10px 15px;
-        width: 40%;
-      }
-      .user-name {
-        margin-bottom: 30px;
-      }
-      .user-image {
-        width: 100px;
-        height: 100px;
-      }
-      .tabs a {
-        padding: 10px;
-      }
-      .upload-icon {
-        width: 90px;
-      }
-    }
+    padding: 10px 15px 10px 15px;
+    width: 40%;
+  }
+  .user-name {
+    margin-bottom: 30px;
+  }
+  .user-image {
+    width: 100px;
+    height: 100px;
+  }
+  .tabs a {
+    padding: 10px;
+  }
+  .upload-icon {
+    width: 90px;
+  }
+}
